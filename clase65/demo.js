@@ -62,6 +62,13 @@ const burlarse2 = (str) => {
     return reemplazo;
 }
 
+//segunda solución del profe
+const burlarse3 = (str) => {
+    return str.replace(/[aeou]/g, 'i');
+}
+const rta2 = burlarse3('segundo programar es dificil')
+console.log(rta2)
+
  /**
   Crear una función aHackerSpeak que tome como argumento un string str
    y devuelva el mismo string convertido a H4CK3R 5P3AK, siguiendo las siguientes reglas:
