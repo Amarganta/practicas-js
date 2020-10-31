@@ -3,9 +3,22 @@
 //que representen una jugada (piedra, papel, tijera) y dependiendo el devuelva un string 
 //con un mensaje avisando qué jugada ganó (o si hubo empate)
 
-const jugarPiedraPapelTijera = (a,b) =>{
-    
-}
+const comprobarGanador = (jugadaJugador1, jugadaJugador2) => {
+    if (jugadaJugador1 == jugadaJugador2) {
+      return;
+    }
+    const ganoJugador1 =
+      (jugadaJugador1 == "piedra" && jugadaJugador2 == "tijera") ||
+      (jugadaJugador1 == "tijera" && jugadaJugador2 == "papel") ||
+      (jugadaJugador1 == "papel" && jugadaJugador2 == "piedra");
+  
+    if (ganoJugador1) {
+      puntaje1++;
+    } else {
+      puntaje2++;
+    }
+  };
+  
 
 
 
