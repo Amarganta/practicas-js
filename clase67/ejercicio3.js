@@ -1,6 +1,9 @@
   
-// Crear una función sumar que tome como argumento un array 
-//de números numeros y devuelva la suma de ellos. Ejemplo:
+// Crear una función contiene que tome como argumentos un 
+//número numero y un array de números numeros y devuelva true
+// o false dependiendo de si dicho numero se encuentra en el 
+//array de numeros. Ejemplo:
+
 
 const numeros = [1, 2, 3, 4, 5];
 

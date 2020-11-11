@@ -6,4 +6,13 @@
 
  */
 
-const misNumeros = [5, 7, 99, 34, 54, 2, 12];
+ const obtenerNumeroMenor = (numeros) => {
+     let min = numeros[0];
+     for(i = 1; i < numeros.length; i++){
+         if(numeros[i] < min){
+             (min=numeros[i])
+         }
+     }
+     console.log(min);
+ }
+ obtenerNumeroMenor([5, 7, 99, 34, 54, 2, 12]);

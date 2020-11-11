@@ -3,10 +3,11 @@
 
 
 const sumar = (numeros) =>{
-    for(let i = 0; numeros.length; i++){
-        numero = numeros[i];
-        suma += numeros;
+    let total = 0;
+    for(let i of numeros){
+        total += i;
+        console.log(total);
     }
 }
 
-console.log(sumar([5, 7, 10, 12, 24])); // 58
+sumar([5, 7, 10, 12, 24]); // 58
