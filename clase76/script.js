@@ -20,13 +20,13 @@ const ingresarColor = () => {
 //a un color en sistema rgb, y una vez ingresado ponga el color de fondo del body con dicho color. 
 //Los valores van del 0 al 255 y corresponden a rojo, verde y azul.
 const colorRGB = () => {
-
-    for(let i = 0; i < colores.length; i++){
-        let colorR = window.prompt('Ingrese el color en RGB');
-        let colorG = window.prompt('color 2');
-        let colorB = window.prompt('color 3');
+    colores = [];
+    for(color of colores){
+    let color = window.prompt('Ingrese el color en valores RGB');
+    console.log(color)
     }
-    document.body.style.backgroundColor = colorR + colorG + colorB;
+    document.body.style.backgroundColor = color;
+
 }
 // Hacer un programa que al iniciarse pregunte mediante un prompt por un temperatura, y con ese dato modifique un h1 en el html, 
 //de forma tal que diga, por ejemplo, Temperatura actual: 20°. Cambiar el color del h1 dependiendo de la temperatura ingresada, 
