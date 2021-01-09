@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ecdc6ee7a0.js" crossorigin="anonymous"></script>
     <title>Ejercicios/DOM</title>
+    <style>
+    </style>
 </head>
 <body>
     <h1 id="temp">-Clase 76-</h1>
@@ -30,7 +35,19 @@
     <button onclick="validarUsuario(validacion)">Validacion de usuario</button>
     <br><br>
     <button onclick="map(numeros, duplicar)">MAP</button>
-    
+
+    <button onclick="agregarImagen()">imagen</button>
+    <div id="imagenHTML"></div>
+
+    <section id="progressBar">
+        <button onclick="progressBar()">barra de progreso</button>
+    </section>
+
+    <section id="postIconos">
+        <button onclick="crearSpan()">mostrar articulo</button>
+        <div id="articulo"></div>
+    </section>
+    <script src="../../JSONS/inhabitants.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
