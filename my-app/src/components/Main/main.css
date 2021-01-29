@@ -1,8 +1,9 @@
-.main{
-    text-align: center;
-    background-color: grey;
-    height: 400px;
+.main {
+  /* text-align: center; */
+  background-color: #FFFFF;
+  height: 400px;
+  flex: 1;
 }
 .div-main {
-    width: 80%;
+  width: 80%;
 }

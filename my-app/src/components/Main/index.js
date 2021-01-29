@@ -1,12 +1,6 @@
-import React from 'react'
-import './main.css'
-import { News, Services } from './components'
+import React from "react";
+import "./main.css";
 
-export const Main = () => {
-    return(
-        <main className='main'>
-            <News />
-            <Services />
-        </main>
-    )
-}
+export const Main = ({ children }) => {
+  return <main className="main">{children}</main>;
+};
