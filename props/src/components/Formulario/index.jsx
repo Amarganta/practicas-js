@@ -22,6 +22,7 @@ const Formulario = () => {
         value={valor}
         onChange={handleChangeValor}
       />
+      <br />
       <Precio valor={valor} moneda={moneda} />
     </div>
   );

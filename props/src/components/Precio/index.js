@@ -1,5 +1,3 @@
-import React from "react";
-
 const Precio = ({ valor, moneda }) => {
   try {
     return new Intl.NumberFormat("ja-JP", {
@@ -7,8 +5,7 @@ const Precio = ({ valor, moneda }) => {
       currency: moneda,
     }).format(valor);
   } catch (error) {
-    return "Formato erroneo";
+    return "Código de divisa ISO erroneo";
   }
 };
-
 export { Precio };

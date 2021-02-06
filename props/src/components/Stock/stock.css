@@ -1,0 +1,19 @@
+.stock {
+  text-align: left;
+}
+
+.stock__list {
+  font-weight: 800;
+}
+.stock__list--red {
+  color: red;
+}
+.stock__list--orange {
+  color: orange;
+}
+.stock__list--yellow {
+  color: yellow;
+}
+.stock__list--green {
+  color: green;
+}

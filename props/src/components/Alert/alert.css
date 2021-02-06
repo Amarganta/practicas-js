@@ -1,0 +1,28 @@
+.alert {
+  text-align: left;
+  border-radius: 0;
+}
+.span {
+  color: black !important;
+  font-weight: 500;
+}
+.alert-danger {
+  color: #e73c38;
+  background-color: #ffd7d6;
+  border-color: #ffffff;
+}
+.alert-success {
+  color: #34a267;
+  background-color: #c5f7d4;
+  border-color: #ffffff;
+}
+.alert-warning {
+  color: #de6b06;
+  background-color: #feecc6;
+  border-color: #ffffff;
+}
+.alert-info {
+  color: #2d80d1;
+  background-color: #cdedff;
+  border-color: #ffffff;
+}
