@@ -1,8 +1,6 @@
 import "./App.css";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Ejemplo } from "./Screens/Ejemplo";
-import { Agregar } from "./Screens/Agregar";
+import { Ejemplo, Agregar, Tareas } from "./Screens";
 import { Layout, Main } from "./components";
 
 const App = () => {
@@ -12,6 +10,7 @@ const App = () => {
         <Main>
           <Switch>
             <Route path="/ejemplo" component={Ejemplo} />
+            <Route path="/tareas" component={Tareas} />
             <Route path="/" component={Agregar} />
           </Switch>
         </Main>

@@ -1,17 +1,25 @@
 import React, { useState } from "react";
-import { axios } from "axios";
+import { api } from "../../utilities";
 const Agregar = () => {
-  const [tarea, setTarea] = useState({});
-
-  const handleOnChange = (e) => {
-    const { name, value } = e.target;
-    setTarea({ ...tarea, [name]: value });
-  };
+  const [titulo, setTitulo] = useState();
+  const [fecha, setFecha] = useState();
+  const [descripcion, setDescripcion] = useState();
+  const [asignado, setAsignado] = useState();
+  // const [tarea, setTarea] = useState({});
+  // Este handle on change hacia una funcion para todos los inputs
+  // const handleOnChange = (e) => {
+  //   const { name, value } = e.target;
+  //   // setTarea({ ...tarea, [name]: value });
+  // };
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-
-    axios.post("/users", tarea);
+    api.post("/tareas.json", {
+      titulo: titulo,
+      fecha: fecha,
+      descripcion: descripcion,
+      asignado: asignado,
+    });
   };
 
   return (
@@ -22,28 +30,32 @@ const Agregar = () => {
           type="text"
           placeholder="titulo"
           name="titulo"
-          onChange={handleOnChange}
+          value={titulo}
+          onChange={(e) => setTitulo(e.target.value)}
         />
         <br />
         <input
           type="date"
           placeholder="fecha"
           name="fecha"
-          onChange={handleOnChange}
+          value={fecha}
+          onChange={(e) => setFecha(e.target.value)}
         />
         <br />
         <input
           type="text"
           placeholder="descripcion"
           name="descripcion"
-          onChange={handleOnChange}
+          value={descripcion}
+          onChange={(e) => setDescripcion(e.target.value)}
         />
         <br />
         <input
           type="text"
           placeholder="asignado"
           name="asignado"
-          onChange={handleOnChange}
+          value={asignado}
+          onChange={(e) => setAsignado(e.target.value)}
         />
         <button type="submit">Agregar tarea</button>
       </form>
