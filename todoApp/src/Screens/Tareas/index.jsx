@@ -18,7 +18,6 @@ const Tareas = ({ titulo }) => {
       .catch((error) => console.log(error));
   };
 
-  traer();
   useEffect(() => {
     traer();
   }, []);
@@ -27,20 +26,19 @@ const Tareas = ({ titulo }) => {
       <Main showButtom={true} titulo="Lista de Tareas">
         <div>
           {tareas.map((tarea) => {
-            <div
-              className="card text-dark bg-light mb-3"
-              style={{ width: "18rem" }}
-            >
-              <div className="card-header">{tarea.fecha}</div>
-              <div className="card-body">
-                <h5 className="card-title">{tarea.titulo}</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <h6>Asignado</h6>
+            return (
+              <div
+                className="card text-dark bg-light mb-3"
+                style={{ width: "18rem" }}
+              >
+                <div className="card-header">{tarea.titulo}</div>
+                <div className="card-body">
+                  <h5 className="card-title">{tarea.descripcion}</h5>
+                  <p className="card-text">{tarea.asignado}</p>
+                  <h6>{tarea.fecha}</h6>
+                </div>
               </div>
-            </div>;
+            );
           })}
         </div>
       </Main>
