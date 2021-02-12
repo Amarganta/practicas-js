@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Layout, Main } from "../../components";
 import { api } from "../../utilities";
 const Agregar = () => {
   const [titulo, setTitulo] = useState();
@@ -23,43 +24,46 @@ const Agregar = () => {
   };
 
   return (
-    <div>
-      <h1>Aqui agregamos tareas</h1>
-      <form onSubmit={handleOnSubmit}>
-        <input
-          type="text"
-          placeholder="titulo"
-          name="titulo"
-          value={titulo}
-          onChange={(e) => setTitulo(e.target.value)}
-        />
-        <br />
-        <input
-          type="date"
-          placeholder="fecha"
-          name="fecha"
-          value={fecha}
-          onChange={(e) => setFecha(e.target.value)}
-        />
-        <br />
-        <input
-          type="text"
-          placeholder="descripcion"
-          name="descripcion"
-          value={descripcion}
-          onChange={(e) => setDescripcion(e.target.value)}
-        />
-        <br />
-        <input
-          type="text"
-          placeholder="asignado"
-          name="asignado"
-          value={asignado}
-          onChange={(e) => setAsignado(e.target.value)}
-        />
-        <button type="submit">Agregar tarea</button>
-      </form>
-    </div>
+    <Layout>
+      <Main titulo="Agregar nueva tarea">
+        <div>
+          <form onSubmit={handleOnSubmit}>
+            <input
+              type="text"
+              placeholder="titulo"
+              name="titulo"
+              value={titulo}
+              onChange={(e) => setTitulo(e.target.value)}
+            />
+            <br />
+            <input
+              type="date"
+              placeholder="fecha"
+              name="fecha"
+              value={fecha}
+              onChange={(e) => setFecha(e.target.value)}
+            />
+            <br />
+            <input
+              type="text"
+              placeholder="descripcion"
+              name="descripcion"
+              value={descripcion}
+              onChange={(e) => setDescripcion(e.target.value)}
+            />
+            <br />
+            <input
+              type="text"
+              placeholder="asignado"
+              name="asignado"
+              value={asignado}
+              onChange={(e) => setAsignado(e.target.value)}
+            />
+            <button type="submit">Agregar tarea</button>
+          </form>
+        </div>
+      </Main>
+    </Layout>
   );
 };
 

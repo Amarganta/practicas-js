@@ -1,12 +1,16 @@
 import React from "react";
-
-const Header = ({ titulo, handleOnClick }) => {
+// esto es { showButtom, titulo, handleOnClick } = props
+// podria destructurarlo en la linea siguiente asi: const {showButtom, titulo, handleOnClick} = props;
+const Header = ({ showButtom, titulo, handleOnClick }) => {
   return (
     <div className="header">
       <h1>{titulo}</h1>
-      <button onClick={handleOnClick}>Agregar</button>
+      {showButtom && <button onClick={handleOnClick}>Agregar</button>}
     </div>
   );
 };
 
+Header.defaultProps = {
+  showButtom: false,
+};
 export { Header };
