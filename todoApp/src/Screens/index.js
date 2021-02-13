@@ -1,3 +1,4 @@
 export { Ejemplo } from "./Ejemplo";
-export { Agregar } from "./Agregar";
+export { AgregarTareas } from "./AgregarTareas";
 export { Tareas } from "./Tareas";
+export { AgregarUsuarios } from "./AgregarUsuarios";

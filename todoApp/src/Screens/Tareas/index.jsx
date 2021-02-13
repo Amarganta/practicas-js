@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Layout, Main } from "../../components";
 import { api } from "../../utilities";
 import { objectToArray } from "../../helpers";
-const Tareas = ({ titulo }) => {
+import { Card } from "./components";
+import "./tareas.css";
+const Tareas = () => {
   const [tareas, setTareas] = useState([]);
 
   const traer = () => {
@@ -24,22 +26,21 @@ const Tareas = ({ titulo }) => {
   return (
     <Layout>
       <Main showButtom={true} titulo="Lista de Tareas">
-        <div>
-          {tareas.map((tarea) => {
-            return (
-              <div
-                className="card text-dark bg-light mb-3"
-                style={{ width: "18rem" }}
-              >
-                <div className="card-header">{tarea.titulo}</div>
-                <div className="card-body">
-                  <h5 className="card-title">{tarea.descripcion}</h5>
-                  <p className="card-text">{tarea.asignado}</p>
-                  <h6>{tarea.fecha}</h6>
-                </div>
-              </div>
-            );
-          })}
+        <div className="row row-cols-1 row-cols-md-3 g-4">
+          {tareas.map(
+            ({ titulo, descripcion, asignado, fecha, status, id }) => {
+              return (
+                <Card
+                  titulo={titulo}
+                  descripcion={descripcion}
+                  asignado={asignado}
+                  fecha={fecha}
+                  status={status}
+                  id={id}
+                />
+              );
+            }
+          )}
         </div>
       </Main>
     </Layout>

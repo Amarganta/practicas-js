@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Layout, Main } from "../../components";
 import { api } from "../../utilities";
-const Agregar = () => {
+const AgregarTareas = () => {
   const [titulo, setTitulo] = useState();
   const [fecha, setFecha] = useState();
   const [descripcion, setDescripcion] = useState();
@@ -20,6 +20,7 @@ const Agregar = () => {
       fecha: fecha,
       descripcion: descripcion,
       asignado: asignado,
+      status: "pending",
     });
   };
 
@@ -44,7 +45,7 @@ const Agregar = () => {
               onChange={(e) => setFecha(e.target.value)}
             />
             <br />
-            <input
+            <textarea
               type="text"
               placeholder="descripcion"
               name="descripcion"
@@ -67,4 +68,4 @@ const Agregar = () => {
   );
 };
 
-export { Agregar };
+export { AgregarTareas };
