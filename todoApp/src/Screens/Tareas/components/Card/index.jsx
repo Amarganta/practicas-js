@@ -27,7 +27,7 @@ const Card = ({ titulo, descripcion, asignado, fecha, status, id }) => {
   };
   return (
     <div className="col">
-      <div className={`card text-dark ${getCardColor()} shadow-sm`}>
+      <div className={`card text-dark  shadow-sm`}>
         <div className="row">
           <div className="col">
             <div className="card-header d-flex align-items-center">
@@ -58,9 +58,14 @@ const Card = ({ titulo, descripcion, asignado, fecha, status, id }) => {
             </div>
           </div>
           <div className="card-body">
-            <h5 className="card-title">{descripcion}</h5>
-            <p className="card-text">{asignado}</p>
-            <h6>{fecha}</h6>
+            <div className="row">
+              <div className="col">
+                <div className={`col color-bar ${getCardColor()}`}>Status</div>
+                <h5 className="card-title">{descripcion}</h5>
+                <p className="card-text">{asignado}</p>
+                <h6>{fecha}</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
