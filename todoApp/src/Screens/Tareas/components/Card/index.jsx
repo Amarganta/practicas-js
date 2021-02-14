@@ -8,11 +8,11 @@ const Card = ({ titulo, descripcion, asignado, fecha, status, id }) => {
     console.log("asigna color");
     switch (taskStatus) {
       case "pending":
-        return "bg-warning";
+        return "border-start-pending";
       case "canceled":
-        return "bg-danger";
+        return "border-start-canceled";
       default:
-        return "bg-success";
+        return "border-start-success";
     }
   };
 
@@ -27,42 +27,42 @@ const Card = ({ titulo, descripcion, asignado, fecha, status, id }) => {
   };
   return (
     <div className="col">
-      <div className={`card text-dark  shadow-sm`}>
-        <div className="row">
-          <div className="col">
-            <div className="card-header d-flex align-items-center">
-              {titulo}
-              <div className="d-flex ms-auto custom-botton ">
-                <button
-                  type="button"
-                  className="btn btn-warning shadow-sm"
-                  title="Pendiente"
-                  id="pendiente"
-                  onClick={() => handleOnClick("pending")}
-                />
-                <button
-                  type="button"
-                  className="btn btn-success shadow-sm"
-                  title="Realizada"
-                  id="realizada"
-                  onClick={() => handleOnClick("success")}
-                />
-                <button
-                  type="button"
-                  className="btn btn-danger shadow-sm"
-                  title="Cancelar"
-                  id="cancelar"
-                  onClick={() => handleOnClick("canceled")}
-                />
+      <div className={`card text-dark  ${getCardColor()}  shadow-sm`}>
+        <div className="card-body">
+          <div className="row">
+            <div className="col">
+              <div className="card-header card-title d-flex align-items-center">
+                <h4>{titulo}</h4>
+                <div className="d-flex ms-auto custom-botton ">
+                  <button
+                    type="button"
+                    className="btn btn-warning shadow-sm"
+                    title="Pendiente"
+                    id="pendiente"
+                    onClick={() => handleOnClick("pending")}
+                  />
+                  <button
+                    type="button"
+                    className="btn btn-success shadow-sm"
+                    title="Realizada"
+                    id="realizada"
+                    onClick={() => handleOnClick("success")}
+                  />
+                  <button
+                    type="button"
+                    className="btn btn-danger shadow-sm"
+                    title="Cancelar"
+                    id="cancelar"
+                    onClick={() => handleOnClick("canceled")}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="card-body">
+
             <div className="row">
               <div className="col">
-                <div className={`col color-bar ${getCardColor()}`}>Status</div>
-                <h5 className="card-title">{descripcion}</h5>
-                <p className="card-text">{asignado}</p>
+                <h5 className="card-subtitle">{asignado}</h5>
+                <p className="card-text">{descripcion}</p>
                 <h6>{fecha}</h6>
               </div>
             </div>
