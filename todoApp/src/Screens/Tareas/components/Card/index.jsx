@@ -36,7 +36,7 @@ const Card = ({ titulo, descripcion, asignado, fecha, status, id }) => {
                 <div className="d-flex ms-auto custom-botton ">
                   <button
                     type="button"
-                    className="btn btn-warning shadow-sm"
+                    className="btn btn-primary shadow-sm"
                     title="Pendiente"
                     id="pendiente"
                     onClick={() => handleOnClick("pending")}

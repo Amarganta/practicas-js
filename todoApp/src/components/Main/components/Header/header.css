@@ -1,0 +1,22 @@
+.btn-agregar {
+  color: #fff;
+  background-color: #fa5c7c;
+  border-color: #fa5c7c;
+  box-shadow: 0 2px 6px 0 rgb(250 92 124 / 50%);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.btn-agregar:hover {
+  color: #fff;
+  background-color: #f9375e;
+}
+.btn-rounded {
+  border-radius: 10em;
+}
+.h4 {
+  color: #6c757d;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 4px;
+}

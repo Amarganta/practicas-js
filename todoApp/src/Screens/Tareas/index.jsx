@@ -25,7 +25,7 @@ const Tareas = () => {
   }, []);
   return (
     <Layout>
-      <Main showButtom={true} titulo="Lista de Tareas">
+      <Main showButtom={true} titulo="Proyectos">
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {tareas.map(
             ({ titulo, descripcion, asignado, fecha, status, id }) => {
